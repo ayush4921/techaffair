@@ -1157,7 +1157,7 @@ h1{
 
 /* Banner */
 
-	#banner {
+	#banner2 {
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -1182,7 +1182,7 @@ h1{
 		overflow: hidden;
 	}
 
-		#banner .inner {
+		#banner .inner2 {
 			text-align: center;
 			position: relative;
 			z-index: 2;
