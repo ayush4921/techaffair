@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Julia And Mandelbrot Set:: Explained in brief</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162815961-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162815961-1');
+</script>
+
+
+<style>
+.major{width:100%;}
+</style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo" target="_blank" ><strong>TECH AFFAIR</strong> <span>BY AYUSH GARG</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="../index.html">Home</a></li>
+							<li><a href="landing.html">Submit Articles</a></li>
+							<li><a href="elements.html">Coding Projects</a></li>
+							<li><a href="index.html#contact">Contact us</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Editor center</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt" style="margin-top: -40px !important;">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Julia And Mandelbrot Set:<h2>Explained in brief</h2></h1>
+									</header>
+									<p>1 March 2020  - Ayush Garg</p>
+									
+									<span class="image main"><img  src="https://raw.githubusercontent.com/rosslh/Interactive-Python-Mandelbrot/master/pictures/image.png" alt="mandelbrot set" /></span>
+									<div class="box">
+										A quick but detailed explanation of mandelbrot sets, their defining functions and their cool representation
+									</div>
+									<div class="entry clearfix">                
+		
+		       						       		
+				
+				<div class="entry-content clearfix">
+							
+			                        
+                        <table style="height: 418px; " border="0">
+<tbody>
+<tr>
+<td style="width: 575px;" colspan="2">
+<h2><u><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Complex numbers: </font></font></span></u></h2>
+</td>
+
+</tr>
+<tr>
+
+<td  align="justify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Before starting to talk about the Julia and Mandelbrot fractals, it is necessary to give a brief reference about complex numbers. </font><font style="vertical-align: inherit;">Basically we can define a complex number as an expression of the form: </font></font><strong>a + bi</font></strong><p></p>
+<p><strong> </strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">where </font></font><span style="color: #ff6600;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> and </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">b</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> are real numbers</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , and </font></font><span style="color: #ff6600;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">i</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> is the square root of -1</font></font></span></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Complex numbers are represented on a plane, so that each complex number has an associated point on the plane and vice versa. </font><font style="vertical-align: inherit;">This identification between points and numbers is what we are interested in knowing in order to understand the representation of the fractals that we deal with in this article. </font><font style="vertical-align: inherit;">(To learn more about complex numbers see </font></font><a href="http://es.wikipedia.org/wiki/N%C3%BAmero_complejo" target="_blank" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">here.</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )</font></font></p>
+<p></p></td>
+</tr>
+<tr>
+<td style="width: 575px;" colspan="2">
+<h2><u><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The Julia and Mandelbrot Sets</font></font></span></u></h2>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="height: 1174px;" border="0" width="601">
+<tbody>
+<tr>
+
+<td colspan="3">
+<p align="justify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> The </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Julia sets</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , so called by the mathematician </font></font><a href="http://es.wikipedia.org/wiki/Gaston_Julia" target="_blank" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gaston Julia</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , are a family of fractal sets that are obtained by studying the behavior of </font></font><span class="mw-redirect"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">complex numbers</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> when iterated by a function.</font></font></p>
+<p></p>
+<div><img src="https://kswenson.files.wordpress.com/2010/03/explorer1.png"></div>
+<p></p></td>
+</tr>
+<tr>
+<td colspan="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A very important family of Julia sets is obtained from simple quadratic functions, such as: </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> F </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">c</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> (z) = z </font></font><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , where </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">c is a complex number</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font><p></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The Julia set obtained from this function is denoted </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">J </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">c</font></font></sub></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">The process to obtain this set of Julia de is as follows: </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Any complex number z is chosen and a sequence of numbers is constructed in the following way:</font></font></p>
+<dl>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = z</font></font></dd>
+<dd></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = F (z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) = z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0 </font></font></sub><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></dd>
+<dd></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = F (z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) = z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1 </font></font><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">……………………….</font></font></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">n + 1</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = F (z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">n</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) = z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">n </font></font><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></dd>
+<dd></dd>
+</dl>
+<p align="justify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> If this sequence is bounded, then z is said to belong to the Julia set of parameter c, denoted by Jc; </font><font style="vertical-align: inherit;">otherwise, if the sequence tends to infinity, z is excluded from it. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><br>
+It is easy to deduce that obtaining a set of Julia is very laborious, since the previous process would have to be repeated for any complex number z, and deciding in each case whether or not that number belongs to the set Jc. </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><br>
+Due to the infinite number of calculations required to obtain the corresponding graph, it took until the eighties to represent these sets. </font><font style="vertical-align: inherit;">Thanks to the invention of the computer, they could finally be seen on a screen, even if Mr. Julia never saw them:</font></font></p>
+</td>
+</tr>
+<tr>
+<td colspan="4">
+<div><img src="https://i.stack.imgur.com/wc3v1.png" width="100%"></div>
+<div></div>
+</td>
+</tr>
+<tr>
+<td colspan="4">
+<p align="justify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> The </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">images of the fractals</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> obtain bright colors thanks to the application of what is often called the </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“escape time algorithm”</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;">This consists of assigning a certain color to a z-point (which corresponds to a pixel in the final image). </font><font style="vertical-align: inherit;">There are several possibilities to carry out such an assignment:</font></font></p>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If the result approaches zero (in which case z belongs to the set),</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If it escapes to infinity (and therefore does not belong to the set),</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If it oscillates between several states,</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If it exhibits no discernible pattern.</font></font></li>
+</ul>
+<p align="justify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Each pixel is colored based on the number of iterations required to escape. </font><font style="vertical-align: inherit;">The color black is usually used, to represent the points that have not escaped after a large and prefixed number of iterations.</font></font></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table style="height: 857px;" border="0" width="600">
+<tbody>
+<tr>
+<td colspan="2">
+<h2><u><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The Mandelbrot set</font></font></span></u></h2>
+</td>
+</tr>
+<tr>
+
+<td><p></p>
+<p align="left"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Mandelbrot modifies Julia's iterative process by making point c variable and setting point z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = 0. </font><font style="vertical-align: inherit;">The </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mandelbrot set</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> is the set of complex numbers </font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">for which the sequence of points obtained by the iterative method</font></font></p>
+<dl>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = 0</font></font></dd>
+<dd></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = F (z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) = z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0 </font></font></sub><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></dd>
+<dd></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = F (z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) = z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1 </font></font><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">……………………….</font></font></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">n + 1</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> = F (z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">n</font></font></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ) = z </font></font><sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">n </font></font><sup><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></sup></sub><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> + c</font></font></dd>
+<dd></dd>
+<dd><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">it does not tend to infinity, that is, it </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">is bounded</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> .</font></font></dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td colspan="2"><p></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If we assign the black color to the points c that give places to bounded sequences and other colors to the other points, depending on how fast they tend to infinity, the representation obtained for the Mandelbrot set is:</font></font></p></td>
+</tr>
+<tr>
+<td colspan="2"><a class="toolbar" href="http://mat.iesvillalbahervas.org/administrator/index.php?option=com_content&amp;sectionid=6&amp;task=edit&amp;cid[]=120"> </a><p></p>
+<div><img src="https://www.researchgate.net/profile/Hemanta_Sarmah3/publication/317092469/figure/fig2/AS:497491078795264@1495622524873/Components-of-Mandelbrot-4-SOME-PROPERTIES-OF-MANDELBROT-SET-In-this-section-we.png"></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table style="height: 706px;" border="0" width="600">
+<tbody>
+<tr align="justify">
+<td colspan="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Let's talk a little about the </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">birth</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> of this complex set. <br><br></font><font style="vertical-align: inherit;">Mandelbrot had had knowledge of Gaston Julia's work since the mid-1940s, since an uncle of his, a mathematics professor at the Collège de France in Paris, had recommended it to him to continue. </font><font style="vertical-align: inherit;">At the time, he was not very interested in them, but at the end of the 70s he took them up again, just when he studied in the </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">application of computer mathematics</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;"><br><br>At this time Mandelbrot worked for </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBM</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> at the </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thomas B. Watson Research Center</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">in New York and, at one point, he was commissioned to study the disturbances suffered by electronic transmissions. </font><font style="vertical-align: inherit;">Mandelbrot discovered that, if a graph were made with the data of said disturbances, </font><span class="hps atn"><strong><font style="vertical-align: inherit;">“</font></strong></span><strong><font style="vertical-align: inherit;"> self-similarity”</font></strong><font style="vertical-align: inherit;"> could be observed </font><font style="vertical-align: inherit;">in </font><span class="hps"><font style="vertical-align: inherit;">all the scales </font></span><span class="hps"><font style="vertical-align: inherit;">of increase. </font></span><span class="hps"><font style="vertical-align: inherit;"><br><br>The most curious thing is that this “self-similarity” could also be seen in other statistical charts such as cotton prices, variations in stock prices, the frequency of English words, the fluctuations of turbulent liquids… The genius of Mandelbrot was to combine Julia's previous work, her studies on disturbances and the use of the computer, speaking for the first time of </font></span><span class="hps"><span style="color: #ff6600;"><font style="vertical-align: inherit;">"fractality"</font></span></span></font><span class="hps atn"> <strong><font style="vertical-align: inherit;"></font></strong></span><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><span class="hps"><font style="vertical-align: inherit;"></font></span> <span class="hps"><font style="vertical-align: inherit;"></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> of all these phenomena and obtaining the images of the complex that bears his name.</font></font></span><p></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If we zoom in on different parts of the set we can find </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">images</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> like these:</font></font></p></td>
+</tr>
+<tr>
+<td colspan="3" valign="middle">
+<div><img src="https://media.giphy.com/media/pb0iuLS5EguxG/giphy.gif"></div>
+<p></p></td>
+</tr>
+<tr align="center">
+
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<p></p>
+								</div>
+		
+			</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form action="https://formsubmit.co/contact@techaffair.in" method="POST">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="email" name="email" placeholder="Email Address">
+
+
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+									<input type="hidden" name="_next" value="https://techaffair.in/thank.html"/>
+									<input type="hidden" name="_autoresponse" value="Thanks For Contacting TechAffair. We will get back to you shortly.">
+
+
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">contact@techaffair.in</a>
+									</div>
+								</section>
+								
+								
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
