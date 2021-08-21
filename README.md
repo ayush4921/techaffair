@@ -1,2 +1,2 @@
 # techaffair
-A repository to present to IVY league institutes for assisting my application.
+A website to cater to all your technological curbs
