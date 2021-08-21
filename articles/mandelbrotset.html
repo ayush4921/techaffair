@@ -1,248 +1,311 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Mandelbrot and Julia Set: Explained in brief</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-		<script data-ad-client="ca-pub-8297178672261488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<meta name="description" content="A quick but detailed explanation of mandelbrot sets, their defining functions and their cool representation.The Julia sets , so called by the mathematician Gaston Julia , are a family of fractal sets that are obtained by studying the behavior of complex numbers when iterated by a function.Mandelbrot modifies Julia's iterative process by making point c variable and setting point z 0 = 0.
+
+<head>
+    <title>Mandelbrot and Julia Set: Explained in brief</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <script data-ad-client="ca-pub-8297178672261488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="A quick but detailed explanation of mandelbrot sets, their defining functions and their cool representation.The Julia sets , so called by the mathematician Gaston Julia , are a family of fractal sets that are obtained by studying the behavior of complex numbers when iterated by a function.Mandelbrot modifies Julia's iterative process by making point c variable and setting point z 0 = 0.
 
 ">
-<script data-ad-client="ca-pub-8297178672261488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<meta name="keywords" content="tech,blog,tech news,science,technology,ayush garg,Ayush Garg,TechAffair,tech affair,Tech Affair,quantum entanglement, artificial intelligence, julia, mandelbrot set,complex numbers,julia and mandelbrot set history,mandelbrot history">
-<meta name="robots" content="index, follow">
-<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <script data-ad-client="ca-pub-8297178672261488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="keywords" content="tech,blog,tech news,science,technology,ayush garg,Ayush Garg,TechAffair,tech affair,Tech Affair,quantum entanglement, artificial intelligence, julia, mandelbrot set,complex numbers,julia and mandelbrot set history,mandelbrot history">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="language" content="English">
-<meta name="revisit-after" content="1 days">
-<meta name="author" content="Ayush Garg">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="Ayush Garg">
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162815961-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162815961-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-162815961-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-
-<style>
-.major{width:100%;}
-</style>
-
-	</head>
-	<body class="is-preload">
-		<script data-ad-client="ca-pub-8297178672261488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<a href="../index.html" class="logo" target="_blank" ><strong>TECH AFFAIR</strong> <span>BY AYUSH GARG</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="../index.html" style="color: white";>Home</a></li>
-							<li><a href="/submit" style="color: white;">Submit Articles</a></li>
-							<li><a href="/content-hub" style="color: white;">Content Hub</a></li>
-							<li><a href="https://www.youtube.com/techtitanofficial" style="color: white;">Educational Videos</a></li>
-							<li><a href="../index.html#contact" style="color: white;">Contact us</a></li>
-						</ul>
-						<ul class="actions stacked" style="color: white;">
-							<li><a href="/blog" class="button primary fit">Blog</a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main" class="alt" style="margin-top: -40px !important; width:100%;">
-
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h1>Julia And Mandelbrot Set:<h2>Explained in brief</h2></h1>
-									</header>
-									<p>1 March 2020  - Ayush Garg</p>
-									
-									<span class="image main"><img  src="https://raw.githubusercontent.com/rosslh/Interactive-Python-Mandelbrot/master/pictures/image.png" alt="mandelbrot set" /></span>
-									<div class="box">
-										A quick but detailed explanation of mandelbrot sets, their defining functions and their cool representation
-									</div>
-									<div class="entry clearfix">                
-		
-		       						       		
-				
-				<div class="entry-content clearfix" style="width: 100%;">
-							
-			                        
-                        <table style="height: 418px; " border="0">
-<tbody>
-<tr>
-<td style="width: 100%;" colspan="2">
-<h2><u><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Complex numbers: </font></font></span></u></h2>
-</td>
-
-</tr>
-<tr>
-
-<td  align="justify"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Before starting to talk about the Julia and Mandelbrot fractals, it is necessary to give a brief reference about complex numbers. </font><font style="vertical-align: inherit;">Basically we can define a complex number as an expression of the form: </font></font><strong>a + bi</font></strong><p></p>
-<p><strong> </strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">where </font></font><span style="color: #ff6600;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> and </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">b</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> are real numbers</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> , and </font></font><span style="color: #ff6600;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">i</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> is the square root of -1</font></font></span></p>
-<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Complex numbers are represented on a plane, so that each complex number has an associated point on the plane and vice versa. </font><font style="vertical-align: inherit;">This identification between points and numbers is what we are interested in knowing in order to understand the representation of the fractals that we deal with in this article. </font><font style="vertical-align: inherit;">(To learn more about complex numbers see </font></font><a href="http://es.wikipedia.org/wiki/N%C3%BAmero_complejo" target="_blank" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">here.</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> )</font></font></p>
-<p></p></td>
-</tr>
-</tbody>
-</table>
-<h2 style="color: #FF6600;">The Julia and Mandelbrot Sets</h2>
-<p>
-
-The Julia sets , so called by the mathematician Gaston Julia , are a family of fractal sets that are obtained by studying the behavior of complex numbers when iterated by a function.
-
-<br>
-<br>
-A very important family of Julia sets is obtained from simple quadratic functions, such as: F c (z) = z 2 + c , where c is a complex number .
-The Julia set obtained from this function is denoted J c . The process to obtain this set of Julia de is as follows:
-Any complex number z is chosen and a sequence of numbers is constructed in the following way:
-<br>
-<br>
-z 0 = z
-z 1 = F (z 0 ) = z 0 2 + c
-z 2 = F (z 1 ) = z 1 2 + c
-……………………….
-z n + 1 = F (z n ) = z n 2 + c
-If this sequence is bounded, then z is said to belong to the Julia set of parameter c, denoted by Jc; otherwise, if the sequence tends to infinity, z is excluded from it.
-<br>
-<br>
-It is easy to deduce that obtaining a set of Julia is very laborious, since the previous process would have to be repeated for any complex number z, and deciding in each case whether or not that number belongs to the set Jc.
-<br>
-<br>
-Due to the infinite number of calculations required to obtain the corresponding graph, it took until the eighties to represent these sets. Thanks to the invention of the computer, they could finally be seen on a screen, even if Mr. Julia never saw them:
-<br>
-<br>
-<img src="https://i.stack.imgur.com/wc3v1.png" width="100%">
-<br>
-<br>
-<div class="box">
-<h2 style="color: #FF6600;">The Julia and Mandelbrot Sets</h2>
-</div>
-<div class="box">
-<p>
-	<br>
-Mandelbrot modifies Julia's iterative process by making point c variable and setting point z 0 = 0. The Mandelbrot set is the set of complex numbers for which the sequence of points obtained by the iterative method
-<br>
-<br>
-z 0 = 0
-z 1 = F (z 0 ) = z 0 2 + c
-z 2 = F (z 1 ) = z 1 2 + c
-……………………….
-z n + 1 = F (z n ) = z n 2 + c
-it does not tend to infinity, that is, it is bounded .
-</p>
-<div class="box">
-If we assign the black color to the points c that give places to bounded sequences and other colors to the other points, depending on how fast they tend to infinity, the representation obtained for the Mandelbrot set is:
-<br>
-	</div>
-<img src="https://www.researchgate.net/profile/Hemanta_Sarmah3/publication/317092469/figure/fig2/AS:497491078795264@1495622524873/Components-of-Mandelbrot-4-SOME-PROPERTIES-OF-MANDELBROT-SET-In-this-section-we.png" width="100%">
-</div>
-</p>
-<div class="box"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Let's talk a little about the </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">birth</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> of this complex set. <br><br></font><font style="vertical-align: inherit;">Mandelbrot had had knowledge of Gaston Julia's work since the mid-1940s, since an uncle of his, a mathematics professor at the Collège de France in Paris, had recommended it to him to continue. </font><font style="vertical-align: inherit;">At the time, he was not very interested in them, but at the end of the 70s he took them up again, just when he studied in the </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">application of computer mathematics</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> . </font><font style="vertical-align: inherit;"><br><br>At this time Mandelbrot worked for </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBM</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> at the </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thomas B. Watson Research Center</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">in New York and, at one point, he was commissioned to study the disturbances suffered by electronic transmissions. </font><font style="vertical-align: inherit;">Mandelbrot discovered that, if a graph were made with the data of said disturbances, </font><span class="hps atn"><strong><font style="vertical-align: inherit;">“</font></strong></span><strong><font style="vertical-align: inherit;"> self-similarity”</font></strong><font style="vertical-align: inherit;"> could be observed </font><font style="vertical-align: inherit;">in </font><span class="hps"><font style="vertical-align: inherit;">all the scales </font></span><span class="hps"><font style="vertical-align: inherit;">of increase. </font></span><span class="hps"><font style="vertical-align: inherit;"><br><br>The most curious thing is that this “self-similarity” could also be seen in other statistical charts such as cotton prices, variations in stock prices, the frequency of English words, the fluctuations of turbulent liquids… The genius of Mandelbrot was to combine Julia's previous work, her studies on disturbances and the use of the computer, speaking for the first time of </font></span><span class="hps"><span style="color: #ff6600;"><font style="vertical-align: inherit;">"fractality"</font></span></span></font><span class="hps atn"> <strong><font style="vertical-align: inherit;"></font></strong></span><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><span class="hps"><font style="vertical-align: inherit;"></font></span> <span class="hps"><font style="vertical-align: inherit;"></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> of all these phenomena and obtaining the images of the complex that bears his name.</font></font></span><p></p>
-<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">If we zoom in on different parts of the set we can find </font></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">images</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> like these:</font></font></p></td>
-</div>
-<div><img src="https://media.giphy.com/media/pb0iuLS5EguxG/giphy.gif" width="100%"></div>
-<p></p>
-
-<p></p>
-								</div>
-		
-			</div>
-			<div class="col-6 col-12-small">
-															<ul class="actions stacked">
-																<li><a href="/blog" class="button primary fit">Check Out More Blogs!</a></li>
-															</ul>
-</div>
-							</section>
-
-					</div>
-
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form action="https://formsubmit.co/contact@techaffair.in" method="POST">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="email" name="email" placeholder="Email Address">
+        gtag('config', 'UA-162815961-1');
+    </script>
 
 
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-									<input type="hidden" name="_next" value="https://techaffair.in/thanks-submit"/>
-									<input type="hidden" name="_autoresponse" value="Thanks For Contacting TechAffair. We will get back to you shortly.">
+    <style>
+        .major {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body class="is-preload">
+    <script data-ad-client="ca-pub-8297178672261488" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="../index.html" class="logo" target="_blank"><strong>TECH AFFAIR</strong> <span>BY AYUSH GARG</span></a>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html" style="color: white" ;>Home</a></li>
+                <li><a href="/submit" style="color: white;">Submit Articles</a></li>
+                <li><a href="/content-hub" style="color: white;">Content Hub</a></li>
+                <li><a href="https://www.youtube.com/techtitanofficial" style="color: white;">Educational Videos</a></li>
+                <li><a href="../index.html#contact" style="color: white;">Contact us</a></li>
+            </ul>
+            <ul class="actions stacked" style="color: white;">
+                <li><a href="/blog" class="button primary fit">Blog</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main" class="alt" style="margin-top: -40px !important; width:100%;">
+
+            <!-- One -->
+            <section id="one">
+                <div class="inner">
+                    <header class="major">
+                        <h1>Julia And Mandelbrot Set:
+                            <h2>Explained in brief</h2>
+                        </h1>
+                    </header>
+                    <p>1 March 2020 - Ayush Garg</p>
+
+                    <span class="image main"><img  src="https://raw.githubusercontent.com/rosslh/Interactive-Python-Mandelbrot/master/pictures/image.png" alt="mandelbrot set" /></span>
+                    <div class="box">
+                        A quick but detailed explanation of mandelbrot sets, their defining functions and their cool representation
+                    </div>
+                    <div class="entry clearfix">
 
 
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">contact@techaffair.in</a>
-									</div>
-								</section>
-								
-								
-							</section>
-						</div>
-					</section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							
-						</div>
-					</footer>
+                        <div class="entry-content clearfix" style="width: 100%;">
 
-			</div>
 
-		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+                            <table style="height: 418px; " border="0">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 100%;" colspan="2">
+                                            <h2><u><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Complex numbers: </font></font></span></u></h2>
+                                        </td>
 
-	</body>
+                                    </tr>
+                                    <tr>
+
+                                        <td align="justify">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">Before starting to talk about the Julia and Mandelbrot fractals, it is necessary to give a brief reference about complex numbers. </font>
+                                                <font style="vertical-align: inherit;">Basically we can define a complex number as an expression of the form: </font>
+                                            </font><strong>a + bi</font></strong>
+                                            <p></p>
+                                            <p><strong> </strong>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">where </font>
+                                                </font><span style="color: #ff6600;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> and </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">b</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> are real numbers</font></font></span>
+                                                <font
+                                                    style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;"> , and </font>
+                                                    </font><span style="color: #ff6600;"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">i</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> is the square root of -1</font></font></span></p>
+                                            <p>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">Complex numbers are represented on a plane, so that each complex number has an associated point on the plane and vice versa. </font>
+                                                    <font style="vertical-align: inherit;">This identification between points and numbers is what we are interested in knowing in order to understand the representation of the fractals that we deal with in this article. </font>
+                                                    <font style="vertical-align: inherit;">(To learn more about complex numbers see </font>
+                                                </font>
+                                                <a href="http://es.wikipedia.org/wiki/N%C3%BAmero_complejo" target="_blank" rel="noopener noreferrer">
+                                                    <font style="vertical-align: inherit;">
+                                                        <font style="vertical-align: inherit;">here.</font>
+                                                    </font>
+                                                </a>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;"> )</font>
+                                                </font>
+                                            </p>
+                                            <p></p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h2 style="color: #FF6600;">The Julia and Mandelbrot Sets</h2>
+                            <p>
+
+                                The Julia sets , so called by the mathematician Gaston Julia , are a family of fractal sets that are obtained by studying the behavior of complex numbers when iterated by a function.
+
+                                <br>
+                                <br> A very important family of Julia sets is obtained from simple quadratic functions, such as: F c (z) = z 2 + c , where c is a complex number . The Julia set obtained from this function is denoted J c . The process to
+                                obtain this set of Julia de is as follows: Any complex number z is chosen and a sequence of numbers is constructed in the following way:
+                                <br>
+                                <br> z 0 = z z 1 = F (z 0 ) = z 0 2 + c z 2 = F (z 1 ) = z 1 2 + c ………………………. z n + 1 = F (z n ) = z n 2 + c If this sequence is bounded, then z is said to belong to the Julia set of parameter c, denoted by Jc; otherwise,
+                                if the sequence tends to infinity, z is excluded from it.
+                                <br>
+                                <br> It is easy to deduce that obtaining a set of Julia is very laborious, since the previous process would have to be repeated for any complex number z, and deciding in each case whether or not that number belongs to the
+                                set Jc.
+                                <br>
+                                <br> Due to the infinite number of calculations required to obtain the corresponding graph, it took until the eighties to represent these sets. Thanks to the invention of the computer, they could finally be seen on a screen,
+                                even if Mr. Julia never saw them:
+                                <br>
+                                <br>
+                                <img src="https://i.stack.imgur.com/wc3v1.png" width="100%">
+                                <br>
+                                <br>
+                                <div class="box">
+                                    <h2 style="color: #FF6600;">The Julia and Mandelbrot Sets</h2>
+                                </div>
+                                <div class="box">
+                                    <p>
+                                        <br> Mandelbrot modifies Julia's iterative process by making point c variable and setting point z 0 = 0. The Mandelbrot set is the set of complex numbers for which the sequence of points obtained by the iterative
+                                        method
+                                        <br>
+                                        <br> z 0 = 0 z 1 = F (z 0 ) = z 0 2 + c z 2 = F (z 1 ) = z 1 2 + c ………………………. z n + 1 = F (z n ) = z n 2 + c it does not tend to infinity, that is, it is bounded .
+                                    </p>
+                                    <div class="box">
+                                        If we assign the black color to the points c that give places to bounded sequences and other colors to the other points, depending on how fast they tend to infinity, the representation obtained for the Mandelbrot set is:
+                                        <br>
+                                    </div>
+                                    <img src="https://www.researchgate.net/profile/Hemanta_Sarmah3/publication/317092469/figure/fig2/AS:497491078795264@1495622524873/Components-of-Mandelbrot-4-SOME-PROPERTIES-OF-MANDELBROT-SET-In-this-section-we.png" width="100%">
+                                </div>
+                            </p>
+                            <div class="box">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> Let's talk a little about the </font>
+                                </font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">birth</font></font></span>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> of this complex set. <br><br></font>
+                                    <font style="vertical-align: inherit;">Mandelbrot had had knowledge of Gaston Julia's work since the mid-1940s, since an uncle of his, a mathematics professor at the Collège de France in Paris, had recommended it to him to continue. </font>
+                                    <font style="vertical-align: inherit;">At the time, he was not very interested in them, but at the end of the 70s he took them up again, just when he studied in the </font>
+                                </font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">application of computer mathematics</font></font></span>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> . </font>
+                                    <font style="vertical-align: inherit;"><br><br>At this time Mandelbrot worked for </font>
+                                </font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBM</font></font></strong>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;"> at the </font>
+                                </font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thomas B. Watson Research Center</font></font></strong>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">in New York and, at one point, he was commissioned to study the disturbances suffered by electronic transmissions. </font>
+                                    <font style="vertical-align: inherit;">Mandelbrot discovered that, if a graph were made with the data of said disturbances, </font><span class="hps atn"><strong><font style="vertical-align: inherit;">“</font></strong></span><strong><font style="vertical-align: inherit;"> self-similarity”</font></strong>
+                                    <font
+                                        style="vertical-align: inherit;"> could be observed </font>
+                                <font style="vertical-align: inherit;">in </font><span class="hps"><font style="vertical-align: inherit;">all the scales </font></span><span class="hps"><font style="vertical-align: inherit;">of increase. </font></span><span class="hps"><font style="vertical-align: inherit;"><br><br>The most curious thing is that this “self-similarity” could also be seen in other statistical charts such as cotton prices, variations in stock prices, the frequency of English words, the fluctuations of turbulent liquids… The genius of Mandelbrot was to combine Julia's previous work, her studies on disturbances and the use of the computer, speaking for the first time of </font></span>
+                                <span
+                                    class="hps"><span style="color: #ff6600;"><font style="vertical-align: inherit;">"fractality"</font></span></span>
+                                    </font><span class="hps atn"> <strong><font style="vertical-align: inherit;"></font></strong></span><strong><font style="vertical-align: inherit;"></font></strong>
+                                    <font style="vertical-align: inherit;"></font><span class="hps"><font style="vertical-align: inherit;"></font></span> <span class="hps"><font style="vertical-align: inherit;"></font><span style="color: #ff6600;"><font style="vertical-align: inherit;"></font></span>
+                                    <font
+                                        style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;"> of all these phenomena and obtaining the images of the complex that bears his name.</font>
+                                        </font>
+                                        </span>
+                                        <p></p>
+                                        <p>
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">If we zoom in on different parts of the set we can find </font>
+                                            </font><span style="color: #ff6600;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">images</font></font></span>
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"> like these:</font>
+                                            </font>
+                                        </p>
+                                        </td>
+                            </div>
+                            <div><img src="https://media.giphy.com/media/pb0iuLS5EguxG/giphy.gif" width="100%"></div>
+                            <p></p>
+
+                            <p></p>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-12-small">
+                        <ul class="actions stacked">
+                            <li><a href="/blog" class="button primary fit">Check Out More Blogs!</a></li>
+                        </ul>
+                    </div>
+            </section>
+
+            </div>
+
+            <!-- Contact -->
+            <section id="contact">
+                <div class="inner">
+                    <section>
+                        <form action="https://formsubmit.co/contact@techaffair.in" method="POST">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" placeholder="Email Address">
+
+
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="6"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                                <li><input type="reset" value="Clear" /></li>
+                            </ul>
+                            <input type="hidden" name="_next" value="https://techaffair.in/thanks-submit" />
+                            <input type="hidden" name="_autoresponse" value="Thanks For Contacting TechAffair. We will get back to you shortly.">
+
+
+                        </form>
+                    </section>
+                    <section class="split">
+                        <section>
+                            <div class="contact-method">
+                                <span class="icon solid alt fa-envelope"></span>
+                                <h3>Email</h3>
+                                <a href="#">contact@techaffair.in</a>
+                            </div>
+                        </section>
+
+
+                    </section>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="inner">
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                        <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    </ul>
+
+                </div>
+            </footer>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/browser.min.js"></script>
+        <script src="../assets/js/breakpoints.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+</body>
+
 </html>

@@ -2,7 +2,7 @@ body,
 html {
   height: 100%;
   background: #110101;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow: hidden;
 }
 
@@ -40,7 +40,7 @@ html {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .slideshow .slick-dots {
   position: fixed;
@@ -51,7 +51,7 @@ html {
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   left: auto;
   color: #fff;
   display: block;
@@ -68,7 +68,7 @@ html {
   text-align: center;
 }
 .slideshow .slick-dots li button:before {
-  content: '';
+  content: "";
   background: #fff;
   color: #fff;
   height: 2px;
@@ -79,9 +79,9 @@ html {
   right: 0;
   left: auto;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   opacity: 0.6;
 }
 .slideshow .slick-dots li.slick-active button:before {
@@ -104,12 +104,12 @@ html {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 100;
   width: 100vw;
   text-align: center;
   color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 100;
 
   pointer-events: none;
@@ -121,7 +121,6 @@ html {
   div.slideshow-text {
     font-size: 93px;
     -webkit-text-stroke: 4px black;
-
   }
 }
 
@@ -129,7 +128,6 @@ html {
   div.slideshow-text {
     font-size: 20px;
     -webkit-text-stroke: 0.7px black;
-
   }
 }
 @media (max-width: 767px) {
